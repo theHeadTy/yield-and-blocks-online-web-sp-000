@@ -1,8 +1,9 @@
 def hello_t(names)
-  arr = []
-  names.each do |name|
-    yield(name)
-  end
+  if block_given?
+    arr = []
+    names.each do |name|
+      yield(name)
+    end
 end
 
 hello_t(["Tim", "Tom", "Jim"]) { |n| puts n }
