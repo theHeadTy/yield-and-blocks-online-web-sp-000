@@ -5,7 +5,8 @@ def hello_t(names)
       yield(name)
     end
   else
-    puts 'No Blo'
+    puts "Hey! No block was given!"
+  end
 end
 
 hello_t(["Tim", "Tom", "Jim"]) { |n| puts n }
